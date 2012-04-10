@@ -1,0 +1,14 @@
+--- 
+applications: 
+  target: 
+    name: java-mysql
+    framework: 
+      name: java_web
+      info: 
+        mem: 512M
+        description: Java Web Application
+    mem: 512M
+    instances: 1
+    services: 
+      mysql: 
+        type: mysql
