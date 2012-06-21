@@ -21,11 +21,10 @@
     </plugins>
   </build>
   <dependencies>
-    <dependency>
-      <groupId>argo.jdom</groupId>
-      <artifactId>argo</artifactId>
-      <version>1.0</version>
-      <scope>compile</scope>
-    </dependency>
+  <dependency>
+    <groupId>net.sourceforge.argo</groupId>
+    <artifactId>argo</artifactId>
+    <version>2.25</version>
+  </dependency>      
   </dependencies>
 </project>
