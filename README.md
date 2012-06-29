@@ -1,7 +1,8 @@
-Pet Catalog Sample
+Java Mysql Sample
 =============
 
-This application 
+This application is a simple java application that shows how to connect
+to a mysql service using the VCAP_SERVICES environment variable.
 
 Building the Application
 ------------------------
