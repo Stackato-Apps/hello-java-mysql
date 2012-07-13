@@ -1,14 +1,14 @@
 --- 
 applications: 
   target: 
-    name: java-mysql
+    name: hello-java-mysql
     framework: 
       name: java_web
       info: 
         mem: 512M
-        description: Java Web Application
+        description: Hello Java MySQL
     mem: 512M
     instances: 1
     services: 
-      mysql: 
+      java-mysql: 
         type: mysql
