@@ -2,8 +2,6 @@ name: hello-java-mysql
 mem: 512M
 framework:
   type: buildpack
-env:
-  BUILDPACK_URL: git://github.com/heroku/heroku-buildpack-java.git
 services:
-  mysql-spring:
+  mysql-java:
     type: mysql
