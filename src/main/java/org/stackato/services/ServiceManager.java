@@ -48,7 +48,7 @@ public enum ServiceManager implements StackatoServices {
             {
                 JsonRootNode root = new JdomParser().parse(vcap_services);
                 
-                JsonNode mysqlNode = root.getNode("mysql-5.1");
+                JsonNode mysqlNode = root.getNode("mysql-5.5");
                 JsonNode credentials = mysqlNode.getNode(0).getNode("credentials");
                 
                 dbname = credentials.getStringValue("name");
