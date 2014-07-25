@@ -1,6 +1,5 @@
 name: hello-java-mysql
 mem: 512M
-framework:
-  type: buildpack
+buildpack: https://github.com/heroku/heroku-buildpack-java.git
 services:
   ${name}-db: mysql
