@@ -3,5 +3,4 @@ mem: 512M
 framework:
   type: buildpack
 services:
-  mysql-java:
-    type: mysql
+  ${name}-db: mysql
