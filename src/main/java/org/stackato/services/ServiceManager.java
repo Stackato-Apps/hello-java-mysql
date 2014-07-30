@@ -37,12 +37,6 @@ public enum ServiceManager implements StackatoServices {
         
         String vcap_services = System.getenv("VCAP_SERVICES");
         
-        String hostname = NULL_STRING;
-        String dbname = NULL_STRING;
-        String user = NULL_STRING;
-        String password = NULL_STRING;
-        String port = NULL_STRING;
-        
         if (vcap_services != null && vcap_services.length() > 0) {
             try
             {
@@ -50,18 +44,17 @@ public enum ServiceManager implements StackatoServices {
                 
                 JsonNode mysqlNode = root.getNode("mysql");
                 JsonNode credentials = mysqlNode.getNode(0).getNode("credentials");
-                
-                dbname = credentials.getStringValue("name");
-                hostname = credentials.getStringValue("hostname");
-                user = credentials.getStringValue("user");
-                password = credentials.getStringValue("password");
-                port = credentials.getNumberValue("port");
+
+                String dbname = credentials.getStringValue("name");
+                String hostname = credentials.getStringValue("hostname");
+                String user = credentials.getStringValue("user");
+                String password = credentials.getStringValue("password");
+                String port = credentials.getNumberValue("port");
                 
                 String dbUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbname;
                 
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection connection = DriverManager.getConnection(dbUrl, user, password);
-                return connection;
+                return DriverManager.getConnection(dbUrl, user, password);
                 
             }
                 catch (Exception e)
