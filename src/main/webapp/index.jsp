@@ -8,11 +8,11 @@ String query = "Select * FROM users";
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
 
-    <title>Stackato with Simple Java</title>
+    <title>HPE Helion Stackato with Simple Java</title>
 </head>
 
 <body>
-    Welcome to the simple web application on stackato...
+    Welcome to the simple web application on HPE Helion Stackato...
     
     <%
     Connection connection = null;
